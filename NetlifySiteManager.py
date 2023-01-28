@@ -1,5 +1,4 @@
 import requests
-from time import sleep
 
 
 class NetlifyAPI:
@@ -72,7 +71,6 @@ class NetlifyAPI:
                     f"Error getting all sites. Status code: {response.status_code}")
             sites = [site['name'] for site in response.json()]
 
-            # return [s for s in sites]
             return sites
 
         except requests.exceptions.RequestException as e:
